@@ -15,7 +15,7 @@ export default function Home() {
             <p className="text-center">
               <a
                 target="_blank"
-                rel="noopener noreferer"
+                rel="noreferer noreferrer"
                 href="https://theodorusclarence.com/blog/spotify-now-playing"
                 className="underline hover:text-blue-500"
               >
@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           <a
             target="_blank"
-            rel="noopener noreferer"
+            rel="noopener noreferer noreferrer"
             href={
               data?.isPlaying
                 ? data.songUrl
@@ -35,6 +35,7 @@ export default function Home() {
           >
             <div className="w-16">
               {data?.isPlaying ? (
+                // eslint-disable-next-line @next/next/no-img-element
                 <img
                   className="w-16 shadow-sm"
                   src={data?.albumImageUrl}
@@ -61,7 +62,7 @@ export default function Home() {
             <h3 className="text-center">Example when playing:</h3>
             <a
               target="_blank"
-              rel="noopener noreferer"
+              rel="noopener noreferer noreferrer"
               href="https://open.spotify.com/track/4a0db84JDqxU4bpWjVDKxn"
               className="relative flex items-center p-5 mx-auto space-x-4 transition-shadow border rounded-md hover:shadow-md w-72"
             >

@@ -36,6 +36,7 @@ export const getNowPlaying = async () => {
   });
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (_, res) => {
   const response = await getNowPlaying();
 
