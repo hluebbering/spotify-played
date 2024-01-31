@@ -15,10 +15,30 @@
       U+2215, U+FEFF, U+FFFD;
   }
 
+  .toptitle {
+    position: absolute;
+    top: 10px;
+    z-index: 5;
+    padding: 5px;
+    line-height: 1;
+}
+
   /* Write your own custom base styles here */
   h1 {
     @apply text-3xl font-bold md:text-5xl font-primary;
   }
+
+  h1.text-center {
+    font-family: 'DM Sans';
+    font-family: Segoe UI;
+    letter-spacing: 5px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+
 
   h2 {
     @apply text-2xl font-bold md:text-4xl font-primary;
@@ -28,9 +48,66 @@
     @apply text-xl font-bold md:text-3xl font-primary;
   }
 
+  h3.text-center {
+    color: black;
+    font-size: 20px;
+    font-family: 'Inter';
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
   h4 {
     @apply text-lg font-bold font-primary;
   }
+
+  p.font-bold.component {
+    font-size: 27px;
+    text-transform: uppercase;
+    font-family: 'Inter';
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    font-weight: 900 !important;
+    color: #fff;
+}
+
+.text-xs {
+  display: -webkit-box;
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  font-family: 'DM Sans';
+  margin: 2px 0 3px 0;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-spacing: -0.1em;
+  font-weight: 400;
+  width: 112%;
+  font-family: "Roboto", sans-serif;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+
+p.font-bold.album {
+  display: -webkit-box;
+  margin: 2px 0 3px 0;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-spacing: -0.1em;
+  font-family: FranklinGothic, Lato, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 100%;
+  color: white !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-block: 7px;
+  font-size: 12px;
+  font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+}
 
   body {
     @apply text-sm font-primary md:text-base;
@@ -112,13 +189,7 @@
     object-fit: cover !important;
   }
 
-  p.font-bold.component {
-    font-size: 24px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: 'Inter';
-    letter-spacing: 2px;
-  }
+ 
 
   .w-16::before {
     position: absolute;
@@ -137,6 +208,16 @@
     border-radius: 20px;
     filter: brightness(1.125) opacity(1);
   }
+
+
+  p.text-center {
+    font-size: 11px;
+    opacity: 0.5;
+    font-weight: 300 !important;
+    font-family: Roboto;
+    line-height: 2;
+    color: white;
+}
 }
 
 @layer utilities {

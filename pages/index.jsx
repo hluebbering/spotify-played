@@ -26,8 +26,9 @@ export default function Home() {
             )}
           </div>
 
-          <div>
-            <h1 className="text-center">Spotify Now Playing using Next.js</h1>
+          <div className="toptitle">
+            <h3 className="text-center">Next.js</h3>
+            <h1 className="text-center">Spotify | Now Playing</h1>
             <p className="text-center">
               <a
                 target="_blank"
