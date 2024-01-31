@@ -44,6 +44,99 @@
     max-width: 68.75rem;
     @apply w-11/12 mx-auto;
   }
+
+  .shadow-sm {
+  }
+
+  body {
+    background-image: url('/img/aasd.jpg');
+    background-image: url('/img/dogsbg2.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .w-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  img.w-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+
+  a.container {
+    position: relative;
+    width: 50% !important;
+    margin: auto !important;
+    padding: 30px !important;
+    min-height: 50vh;
+    color: white;
+    box-shadow: -0.2em -0.125em 0.125em rgb(0 0 0 / 25%),
+      0 0 0 0.04em rgb(0 0 0 / 30%), 0.02em 0.02em 0.02em rgb(0 0 0 / 40%) inset,
+      -0.05em -0.05em 0.02em rgb(255 255 255 / 80%) inset !important;
+    background-color: #eee;
+    border-radius: 15px;
+    border: 2px outset rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    background-image: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+    background-color: rgba(0, 0, 0, 0.05);
+    background-image: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+  }
+
+  .w-16 {
+    width: 45% !important;
+    border-radius: 20px;
+    filter: saturate(1.025) contrast(1.015)
+      drop-shadow(0.125px 0.25px 0.25px black);
+  }
+
+  img.w-16.shadow-sm {
+    display: flex !important;
+    position: relative !important;
+    width: auto !important;
+    height: 60% !important;
+    object-fit: cover !important;
+  }
+
+  p.font-bold.component {
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Inter';
+    letter-spacing: 2px;
+  }
+
+  .w-16::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: '';
+    width: calc(100% + 0px);
+    height: calc(100% + 1px);
+    background: url(https://pudding.cool/2021/10/judge-my-music/assets/images/plastic-small.jpg);
+    background-size: contain;
+    mix-blend-mode: screen;
+    opacity: 1;
+    z-index: 1;
+    mix-blend-mode: difference;
+    opacity: 0.5;
+    border-radius: 20px;
+    filter: brightness(1.125) opacity(1);
+  }
 }
 
 @layer utilities {
