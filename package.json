@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.3.4",
+    "album-art": "^3.2.1",
     "autoprefixer": "^10.4.2",
     "clsx": "^1.1.1",
+    "itunes-albumart": "^1.0.0",
     "next": "^11.1.4",
     "next-seo": "^6.4.0",
     "postcss": "^8.4.6",

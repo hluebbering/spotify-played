@@ -1,4 +1,6 @@
 import querystring from 'querystring';
+const albumArt = require('album-art');
+//const albumArt = require('itunes-albumart');
 
 const {
   SPOTIFY_CLIENT_ID: client_id,
@@ -8,7 +10,9 @@ const {
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
+const RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
+
 
 const getAccessToken = async () => {
   const response = await fetch(TOKEN_ENDPOINT, {
@@ -36,12 +40,44 @@ export const getNowPlaying = async () => {
   });
 };
 
+export const getRecentlyPlayed = async () => {
+  const { access_token } = await getAccessToken();
+
+  return fetch(RECENTLY_PLAYED_ENDPOINT, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  });
+};
+
+
+export const topTracks = async () => {
+  const { access_token } = await getAccessToken();
+
+  return fetch("https://api.spotify.com/v1/me/top/tracks", {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  });
+};
+
+
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (_, res) => {
   const response = await getNowPlaying();
 
+
   if (response.status === 204 || response.status > 400) {
-    return res.status(200).json({ isPlaying: false });
+
+    //const response2 = await getRecentlyPlayed();
+    //const prevSong = await response2.json();
+    //const prevTitle = prevSong.items[0].track.name;
+    //const prevAlbumImageUrl = prevSong.items[0].track.album.images[0].url;
+
+    return res.status(200).json({
+      isPlaying: false
+    });
   }
 
   const song = await response.json();
@@ -52,6 +88,9 @@ export default async (_, res) => {
   const albumImageUrl = song.item.album.images[0].url;
   const songUrl = song.item.external_urls.spotify;
 
+
+  const albumHigh = await albumArt(artist, { album: album, size: 'large' });
+
   return res.status(200).json({
     album,
     albumImageUrl,
@@ -59,5 +98,10 @@ export default async (_, res) => {
     isPlaying,
     songUrl,
     title,
+    albumHigh
   });
 };
+
+
+
+

@@ -4,7 +4,9 @@ import { SiSpotify } from "react-icons/si";
 
 export default function Home() {
   const fetcher = (url) => fetch(url).then((r) => r.json());
+  //const fetcher2 = (url) => fetch(url).then((r) => r.json());
   const { data } = useSWR("/api/spotify", fetcher);
+  //const { data2 } = useSWR("/api/recent", fetcher2);
   return (
     <>
       <NextSeo />
@@ -15,7 +17,8 @@ export default function Home() {
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 className="w-img"
-                src={data?.albumImageUrl}
+                //src={data?.albumImageUrl}
+                src={data?.albumHigh}
                 alt={data?.album}
               />
             ) : (
@@ -61,6 +64,9 @@ export default function Home() {
             </div>
 
             <div className="flex-1">
+              <p className="font-bold album">
+                {data?.isPlaying ? data.album : ""}
+              </p>
               <p className="font-bold component">
                 {data?.isPlaying ? data.title : "Not Listening"}
               </p>
