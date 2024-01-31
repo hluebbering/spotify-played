@@ -18,7 +18,7 @@ export default function Home() {
               <img
                 className="w-img"
                 //src={data?.albumImageUrl}
-                src={data?.albumImageUrl}
+                src={data?.favAlbumCover}
                 alt={data?.album}
               />
             ) : (
