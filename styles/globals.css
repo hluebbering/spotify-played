@@ -5,11 +5,11 @@
 @layer base {
   /* inter var - latin */
   @font-face {
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 100 900;
     font-display: optional;
-    src: url('/fonts/inter-var-latin.woff2') format('woff2');
+    src: url("/fonts/inter-var-latin.woff2") format("woff2");
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
       U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
       U+2215, U+FEFF, U+FFFD;
@@ -21,7 +21,7 @@
     z-index: 5;
     padding: 5px;
     line-height: 1;
-}
+  }
 
   /* Write your own custom base styles here */
   h1 {
@@ -29,16 +29,14 @@
   }
 
   h1.text-center {
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-family: Segoe UI;
     letter-spacing: 5px;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.5;
     text-transform: uppercase;
-}
-
-
+  }
 
   h2 {
     @apply text-2xl font-bold md:text-4xl font-primary;
@@ -51,10 +49,10 @@
   h3.text-center {
     color: black;
     font-size: 20px;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-weight: 600;
     letter-spacing: 1px;
-}
+  }
 
   h4 {
     @apply text-lg font-bold font-primary;
@@ -63,51 +61,59 @@
   p.font-bold.component {
     font-size: 27px;
     text-transform: uppercase;
-    font-family: 'Inter';
+    font-family: "Inter";
     letter-spacing: 2px;
     line-height: 1;
     margin-top: 6px;
     margin-bottom: 8px;
     font-weight: 900 !important;
     color: #fff;
-}
+    filter: drop-shadow(0.4025px 0.8425px 0.325px black);
+    background-size: cover;
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-stroke-color: hsl(0deg 0% 20% / 50%);
+    background-image: linear-gradient(45deg, white, #f6f8fa);
+  }
 
-.text-xs {
-  display: -webkit-box;
-  font-size: 20px !important;
-  line-height: 1.5 !important;
-  font-family: 'DM Sans';
-  margin: 2px 0 3px 0;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  word-spacing: -0.1em;
-  font-weight: 400;
-  width: 112%;
-  font-family: "Roboto", sans-serif;
-  color: #FFF;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
+  .text-xs {
+    display: -webkit-box;
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+    font-family: "DM Sans";
+    margin: 2px 0 3px 0;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-spacing: -0.1em;
+    font-weight: 400;
+    width: 112%;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
 
-
-p.font-bold.album {
-  display: -webkit-box;
-  margin: 2px 0 3px 0;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  word-spacing: -0.1em;
-  font-family: FranklinGothic, Lato, sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-  width: 100%;
-  color: white !important;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-block: 7px;
-  font-size: 12px;
-  font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
-}
+  p.font-bold.album {
+    display: -webkit-box;
+    margin: 2px 0 3px 0;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-spacing: -0.1em;
+    font-family: FranklinGothic, Lato, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 100%;
+    color: white !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-block: 7px;
+    font-size: 12px;
+    font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl,
+      CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+  }
 
   body {
     @apply text-sm font-primary md:text-base;
@@ -126,8 +132,8 @@ p.font-bold.album {
   }
 
   body {
-    background-image: url('/img/aasd.jpg');
-    background-image: url('/img/dogsbg2.jpg');
+    background-image: url("/img/aasd.jpg");
+    background-image: url("/img/dogsbg2.jpg");
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -144,7 +150,6 @@ p.font-bold.album {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
   }
 
   a.container {
@@ -152,7 +157,6 @@ p.font-bold.album {
     width: 50% !important;
     margin: auto !important;
     padding: 30px !important;
-    min-height: 50vh;
     color: white;
     box-shadow: -0.2em -0.125em 0.125em rgb(0 0 0 / 25%),
       0 0 0 0.04em rgb(0 0 0 / 30%), 0.02em 0.02em 0.02em rgb(0 0 0 / 40%) inset,
@@ -189,13 +193,11 @@ p.font-bold.album {
     object-fit: cover !important;
   }
 
- 
-
   .w-16::before {
     position: absolute;
     top: 0px;
     left: 0px;
-    content: '';
+    content: "";
     width: calc(100% + 0px);
     height: calc(100% + 1px);
     background: url(https://pudding.cool/2021/10/judge-my-music/assets/images/plastic-small.jpg);
@@ -209,7 +211,6 @@ p.font-bold.album {
     filter: brightness(1.125) opacity(1);
   }
 
-
   p.text-center {
     font-size: 11px;
     opacity: 0.5;
@@ -217,8 +218,32 @@ p.font-bold.album {
     font-family: Roboto;
     line-height: 2;
     color: white;
+  }
 }
+
+@media (max-width: 630px) {
+  a.container {
+    width: 65% !important;
+    padding: 30px 20px !important;
+    height: auto !important;
 }
+p.font-bold.component {
+  font-size: 18px;
+}
+
+.text-xs {
+  font-size: 12px !important;
+  letter-spacing: 3px !important;
+}
+p.font-bold.album {
+  font-size: 10px !important;
+}
+
+}
+
+
+
+
 
 @layer utilities {
   .animated-underline {
@@ -234,3 +259,5 @@ p.font-bold.album {
     background-size: 0 2px, 100% 2px;
   }
 }
+
+
