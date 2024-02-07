@@ -1,5 +1,7 @@
 import querystring from "querystring";
 const albumArt = require("album-art");
+import React, { useState, useEffect } from "react";
+
 //const albumArt = require('itunes-albumart');
 
 const {
@@ -59,8 +61,11 @@ export const topTracks = async () => {
   });
 };
 
+
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (_, res) => {
+
   const response = await getNowPlaying();
 
   if (response.status === 204 || response.status > 400) {
@@ -73,6 +78,8 @@ export default async (_, res) => {
       isPlaying: false,
     });
   }
+
+
 
   const song = await response.json();
   const isPlaying = song.is_playing;
@@ -111,3 +118,7 @@ export default async (_, res) => {
     favAlbumCover,
   });
 };
+
+
+
+

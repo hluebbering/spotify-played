@@ -96,3 +96,5 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 album-art 'Metro Boomin' --album 'Heroes and Villains' --size 'large'
 
 var maximage = require('./userscript.user.js');
+
+"value": "public, max-age=31536000, immutable"
