@@ -2,6 +2,9 @@ This is a NextJs and Tailwind project bootstrapped using nextjs-tailwind-starter
 
 
 ![](public/img/app_preview.png)
+![](public/img/app_preview2.png)
+![](public/img/app_preview3.png)
+![](public/img/app_preview4.png)
 
 
 ## Getting Started
