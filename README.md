@@ -1,5 +1,9 @@
 This is a NextJs and Tailwind project bootstrapped using nextjs-tailwind-starter created by [Theodorus Clarence](https://github.com/theodorusclarence/nextjs-tailwind-starter).
 
+
+![](public/img/app_preview.png)
+
+
 ## Getting Started
 
 To use this starter, you can use create-next-app to do it by:
