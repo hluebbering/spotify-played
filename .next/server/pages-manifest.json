@@ -3,6 +3,5 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/": "pages/index.js",
-  "/api/spotify": "pages/api/spotify.js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
+  "/api/spotify": "pages/api/spotify.js"
 }
