@@ -85,10 +85,12 @@ export default async (_, res) => {
     const albumCovers = [
       "https://www.slantmagazine.com/wp-content/uploads/2022/12/heroesandvillains.jpg",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/metrospider.png?raw=true",
+      "https://assets.codepen.io/4927073/433452617_952539916241903_4937267218052324278_n.jpg"
     ];
     const favAlbums = [
       "HEROES & VILLAINS",
       "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)",
+      "WE DON'T TRUST YOU"
     ];
 
     let index = favAlbums.indexOf(album);
