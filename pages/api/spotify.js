@@ -120,7 +120,7 @@ export default async (_, res) => {
   await getData();
 
   // Call the API every 5 seconds
-  setTimeout(getData, 5000);
+  setTimeout(getData, 50000000);
 };
 
 

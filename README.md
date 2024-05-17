@@ -1,11 +1,9 @@
 This is a NextJs and Tailwind project bootstrapped using nextjs-tailwind-starter created by [Theodorus Clarence](https://github.com/theodorusclarence/nextjs-tailwind-starter).
 
-
 ![](public/img/app_preview.png)
 ![](public/img/app_preview2.png)
 ![](public/img/app_preview3.png)
 ![](public/img/app_preview4.png)
-
 
 ## Getting Started
 
@@ -99,9 +97,11 @@ curl -H "Authorization: Basic ZDVjMGVlMWM4MTM5NGMzZDk4MmRjNjQzYTIzZjg0OGU6ZTk3OT
 AQDOTVj2PkKcs-UCvA_VjrrWlIXggTEv8ThoPnrF02yT0H4DvJnnab97xwWs20cbMWVulXOcYxhA8fA6pTdXKWkBXmXKLX9tWwuiEK94lZ2nXiiKRvTTmAgoGOSu8OJyrj8
 
 $env:NODE_OPTIONS = "--openssl-legacy-provider"
+set NODE_OPTIONS=--openssl-legacy-provider
 
 album-art 'Metro Boomin' --album 'Heroes and Villains' --size 'large'
 
 var maximage = require('./userscript.user.js');
 
+"value": "public, max-age=31536000, immutable"
 "value": "public, max-age=31536000, immutable"
