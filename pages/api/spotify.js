@@ -84,11 +84,13 @@ export default async (_, res) => {
 
     const favAlbumsMain = [
       "HEROES & VILLAINS",
-      "a Gift & a Curse"
+      "a Gift & a Curse",
+      "DC4"
     ];
     const albumCoversMain = [
       "https://github.com/hluebbering/web-design/blob/main/assets/images/metroboomin2.gif?raw=true",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true"
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/dc4.gif?raw=true"
     ];
 
     let indexMain = favAlbumsMain.indexOf(album);
@@ -155,7 +157,7 @@ export default async (_, res) => {
   await getData();
 
   // Call the API every 5 seconds
-  setTimeout(getData, 500000000000);
+  //setTimeout(getData, 500000000000);
 };
 
 
