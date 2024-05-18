@@ -111,7 +111,8 @@ export default async (_, res) => {
       "Honestly, Nevermind",
       "a Gift & a Curse",
       "Everybody Looking",
-      "SAVAGE MODE II"
+      "SAVAGE MODE II",
+      "american dream"
     ];
 
     const albumCovers = [
@@ -122,7 +123,8 @@ export default async (_, res) => {
       "https://github.com/hluebbering/web-design/blob/main/assets/images/drakeNevermind.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/GucciMane9.gif?raw=true",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/metrox21.gif?raw=true"
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/metrox21.gif?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/21sav.gif?raw=true"
     ];
 
     let index = favAlbums.indexOf(album);
