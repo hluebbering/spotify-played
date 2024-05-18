@@ -76,7 +76,7 @@ const NowPlaying = () => {
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   className="w-16 shadow-sm"
-                  src={nowPlaying?.albumImageUrl}
+                  src={nowPlaying?.favAlbumCoverMain}
                   alt={nowPlaying?.album}
                 />
               ) : (

@@ -82,15 +82,47 @@ export default async (_, res) => {
     const albumImageUrl = song.item.album.images[0].url;
     const songUrl = song.item.external_urls.spotify;
 
-    const albumCovers = [
-      "https://www.slantmagazine.com/wp-content/uploads/2022/12/heroesandvillains.jpg",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/metrospider.png?raw=true",
-      "https://assets.codepen.io/4927073/433452617_952539916241903_4937267218052324278_n.jpg"
+    const favAlbumsMain = [
+      "HEROES & VILLAINS",
+      "a Gift & a Curse"
     ];
+    const albumCoversMain = [
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/metroboomin2.gif?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true"
+    ];
+
+    let indexMain = favAlbumsMain.indexOf(album);
+    let favAlbumCoverMain;
+
+    if (indexMain != -1) {
+      favAlbumCoverMain = albumCoversMain[indexMain];
+    } else {
+      favAlbumCoverMain = albumImageUrl;
+    }
+
+
+
+
     const favAlbums = [
       "HEROES & VILLAINS",
       "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)",
-      "WE DON'T TRUST YOU"
+      "WE DON'T TRUST YOU",
+      "WE STILL DON'T TRUST YOU",
+      "Honestly, Nevermind",
+      "a Gift & a Curse",
+      "Everybody Looking",
+      "SAVAGE MODE II"
+    ];
+
+    const albumCovers = [
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/HeroesVillains3.png?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/metrospider.png?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/MetroxFuture.jpg?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/MetroxFuture2.png?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/drakeNevermind.gif?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/GucciMane9.gif?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/metrox21.gif?raw=true"
     ];
 
     let index = favAlbums.indexOf(album);
@@ -113,6 +145,7 @@ export default async (_, res) => {
       title,
       albumHigh,
       favAlbumCover,
+      favAlbumCoverMain
     });
   };
 
@@ -120,7 +153,7 @@ export default async (_, res) => {
   await getData();
 
   // Call the API every 5 seconds
-  setTimeout(getData, 50000000);
+  setTimeout(getData, 500000000000);
 };
 
 
