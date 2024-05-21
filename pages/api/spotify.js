@@ -85,12 +85,14 @@ export default async (_, res) => {
     const favAlbumsMain = [
       "HEROES & VILLAINS",
       "a Gift & a Curse",
-      "DC4"
+      "DC4",
+      "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)"
     ];
     const albumCoversMain = [
       "https://github.com/hluebbering/web-design/blob/main/assets/images/metroboomin2.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/dc4.gif?raw=true"
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/dc4.gif?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/metrospider.gif?raw=true"
     ];
 
     let indexMain = favAlbumsMain.indexOf(album);
@@ -114,7 +116,8 @@ export default async (_, res) => {
       "a Gift & a Curse",
       "Everybody Looking",
       "SAVAGE MODE II",
-      "american dream"
+      "american dream",
+      "One of Wun"
     ];
 
     const albumCovers = [
@@ -126,7 +129,8 @@ export default async (_, res) => {
       "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/GucciMane9.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/metrox21.gif?raw=true",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/21sav.gif?raw=true"
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/21sav.gif?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/gunnaWun.gif?raw=true"
     ];
 
     let index = favAlbums.indexOf(album);
