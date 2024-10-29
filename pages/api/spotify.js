@@ -123,7 +123,8 @@ export default async (_, res) => {
       "Take Care (Deluxe)",
       "Graduation",
       "Drip Season 3 (Deluxe)",
-      "CrasH Talk"
+      "CrasH Talk",
+      "Honestly, Nevermind"
     ];
 
     const albumCovers = [
@@ -142,7 +143,8 @@ export default async (_, res) => {
       "/video/takecare.mp4",
       "/video/graduation.mp4",
       "/video/drip-season3.mp4",
-      "/video/crash-talk.mp4"
+      "/video/crash-talk.mp4",
+      "/video/honestly-nevermind.mp4"
     ];
 
     let index = favAlbums.indexOf(album);
