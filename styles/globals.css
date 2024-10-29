@@ -115,6 +115,15 @@
       CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
   }
 
+  video {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
   body {
     @apply text-sm font-primary md:text-base;
   }

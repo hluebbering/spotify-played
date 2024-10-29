@@ -117,7 +117,8 @@ export default async (_, res) => {
       "Everybody Looking",
       "SAVAGE MODE II",
       "american dream",
-      "One of Wun"
+      "One of Wun",
+      "Legends Never Die"
     ];
 
     const albumCovers = [
@@ -130,7 +131,8 @@ export default async (_, res) => {
       "https://github.com/hluebbering/web-design/blob/main/assets/images/GucciMane9.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/metrox21.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/21sav.gif?raw=true",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/gunnaWun.gif?raw=true"
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/gunnaWun.gif?raw=true",
+      "/video/juicewrld-legends.mp4"
     ];
 
     let index = favAlbums.indexOf(album);

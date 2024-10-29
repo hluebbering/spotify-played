@@ -5,6 +5,7 @@ node_modules
 /.next
 /.next/
 .next
+.env.local
 
 # /.pnp
 # .pnp.js
@@ -37,3 +38,8 @@ node_modules
 # # vercel
 # .vercel
 .next/
+
+
+# Environment variables
+.env
+.env.local
