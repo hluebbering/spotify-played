@@ -1,19 +1,29 @@
-This is a NextJs and Tailwind project bootstrapped using nextjs-tailwind-starter created by [Theodorus Clarence](https://github.com/theodorusclarence/nextjs-tailwind-starter).
+# Next.js Tailwind Spotify Now Playing
 
-![](public/img/app_preview.png)
-![](public/img/app_preview2.png)
-![](public/img/app_preview3.png)
-![](public/img/app_preview4.png)
+This is a Next.js and Tailwind CSS project bootstrapped using [nextjs-tailwind-starter](https://github.com/theodorusclarence/nextjs-tailwind-starter) created by [Theodorus Clarence](https://github.com/theodorusclarence).
+
+![App Preview](public/img/app_preview.png)
+![App Preview 2](public/img/app_preview2.png)
+![App Preview 3](public/img/app_preview3.png)
+![App Preview 4](public/img/app_preview4.png)
 
 ## Getting Started
 
-To use this starter, you can use create-next-app to do it by:
+To use this starter, you can initialize your project using `create-next-app`:
 
 ```bash
 npx create-next-app -e https://github.com/theodorusclarence/nextjs-tailwind-starter project-name
 ```
 
-First, run the development server:
+Install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -21,70 +31,107 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## What's Inside
+## Setting Up Spotify Integration
 
-This starter file has a opinionated styling for heading with responsive size and Montserrat font imported from the google fonts.
+To display your current Spotify playback status, you'll need to set up authentication with the Spotify API.
 
-There is also Seo Component to customize page title and opengraph meta tags.
-SEO is using next-seo packages, make sure you configure next-seo.config.js to your preferred
+### 1. Obtain Spotify API Credentials
 
-> https://accounts.spotify.com/authorize?client_id=CLIENT_ID_HERE&response_type=code&redirect_uri=http
-> %3A%2F%2Flocalhost:3000&scope=user-read-currently-playing+user-read-recently-played+user-top-read
+- **Create a Spotify Developer Account**: If you don't have one, sign up at [Spotify for Developers](https://developer.spotify.com/).
+- **Create a New App**: In your Spotify Dashboard, create a new app to get your `Client ID` and `Client Secret`.
+- **Set Redirect URI**: In your app settings, add `http://localhost:3000` as a Redirect URI.
 
-> http://localhost:3000/?code=**\_**
+### 2. Get Authorization Code
 
-**Code:**
+Visit the following URL in your browser, replacing `YOUR_CLIENT_ID` with your actual client ID:
 
-`AQBn3tC1lAnRYO2mB0X5Hdi6mJAVNemXSpWu6DD5f3XhiRucADpCNPp08T6IvVC5NWl2Omaq0J8WBBIpPZVBxW-4Ihp4pec0IB4LQyoLs0*xMgyJ86Fhg_n1lbyHcSja-w7GXAaljVAtwvvSNJ_RrzdyRPNluMhnXDoPEQ3WnylLcg7jB0uIRSO*-X32HsGBVQCQJ_fd`
-
-`AQB8nlgyWFVXMVfxvy9zTi9YhFujpa0mkwFiCsHzOQvAZruJQYCFzbwDN-l42ThJS9cI1pz9iwkj2hPWfStL5ljl3Hc_eRaz6bHJFp5aLCbS4f617uuAj5MTjEz68qur_Ta3Vb7sMtOm4wEU8QT7kP5Rt-blm0BFmFKLw6mnzSmRID0tH4WbET5mE3d3yFAv0kspBwZrWbvu8oChXSEShd_3zm-uFUQ43Rz45lcmd255zf5jnxqHJSTGkQr6HyDm`
-
-**client_id:client_secret:**
-
-- [base64 format:](https://www.base64encode.org/)
-
-39284c269b304f4eb54c2983758c34a8:b2761ae03e0149df808c2298dfeddbc6
-
-> MzkyODRjMjY5YjMwNGY0ZWI1NGMyOTgzNzU4YzM0YTg6YjI3NjFhZTAzZTAxNDlkZjgwOGMyMjk4ZGZlZGRiYzY=
-
-```js
-curl -H "Authorization: Basic CHANGE_BASE64_HERE"
--d grant_type=authorization_code -d code=CHANGE_CODE_HERE -d redirect_uri=http%3A
-%2F%2Flocalhost:3000 https://accounts.spotify.com/api/token
+```
+https://accounts.spotify.com/authorize?client_id=YOUR_CLIENT_ID&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000&scope=user-read-currently-playing%20user-read-recently-played%20user-top-read
 ```
 
-```js
-curl -H "Authorization: Basic MzkyODRjMjY5YjMwNGY0ZWI1NGMyOTgzNzU4YzM0YTg6YjI3NjFhZTAzZTAxNDlkZjgwOGMyMjk4ZGZlZGRiYzY=" -d grant_type=authorization_code -d code=AQB8nlgyWFVXMVfxvy9zTi9YhFujpa0mkwFiCsHzOQvAZruJQYCFzbwDN-l42ThJS9cI1pz9iwkj2hPWfStL5ljl3Hc_eRaz6bHJFp5aLCbS4f617uuAj5MTjEz68qur_Ta3Vb7sMtOm4wEU8QT7kP5Rt-blm0BFmFKLw6mnzSmRID0tH4WbET5mE3d3yFAv0kspBwZrWbvu8oChXSEShd_3zm-uFUQ43Rz45lcmd255zf5jnxqHJSTGkQr6HyDm -d redirect_uri=http%3A%2F%2Flocalhost:3000 https://accounts.spotify.com/api/token
+After authorizing, you'll be redirected to `http://localhost:3000/?code=YOUR_AUTHORIZATION_CODE`. Note the `code` parameter in the URL.
+
+### 3. Exchange Authorization Code for Tokens
+
+You need to exchange the authorization code for access and refresh tokens.
+
+- **Encode Your Client Credentials**: Base64 encode your `Client ID` and `Client Secret` in the format `CLIENT_ID:CLIENT_SECRET`.
+
+  ```bash
+  echo -n 'YOUR_CLIENT_ID:YOUR_CLIENT_SECRET' | base64
+  ```
+
+- **Make the Token Request**:
+
+  ```bash
+  curl -H "Authorization: Basic BASE64_ENCODED_CLIENT_CREDENTIALS" \
+  -d grant_type=authorization_code \
+  -d code=YOUR_AUTHORIZATION_CODE \
+  -d redirect_uri=http%3A%2F%2Flocalhost%3A3000 \
+  https://accounts.spotify.com/api/token
+  ```
+
+- **Response**: You'll receive a JSON response containing `access_token` and `refresh_token`.
+
+### 4. Set Environment Variables
+
+Create a `.env.local` file in the root directory of your project:
+
+```env
+SPOTIFY_CLIENT_ID=your_client_id
+SPOTIFY_CLIENT_SECRET=your_client_secret
+SPOTIFY_REFRESH_TOKEN=your_refresh_token
 ```
 
-```json
-{
-  "access_token": "BQDR9BurFAk35f6nNfKXOK_s4p4c2Whspdkr8pT5gqchmCuZcyqSs3LjmdOIkMT36vsnYrtCa9MmSYHasywMBGRzovHOF6DbK4BCWaCxswDpJDGK1Cili-IYBcIVA-QRfz9GzBPj7wasL7VSdZmn-VeMQxgEoOFW-3l2CtXX1JwyYT_Lk-zjWvKh7jXb2aQ",
-  "token_type": "Bearer",
-  "expires_in": 3600,
-  "refresh_token": "AQDOTVj2PkKcs-UCvA_VjrrWlIXggTEv8ThoPnrF02yT0H4DvJnnab97xwWs20cbMWVulXOcYxhA8fA6pTdXKWkBXmXKLX9tWwuiEK94lZ2nXiiKRvTTmAgoGOSu8OJyrj8",
-  "scope": "user-read-currently-playing"
-}
-```
+**Important**: Do **not** commit `.env.local` to your repository. Add it to your `.gitignore` file to keep your credentials secure.
 
-AQDOTVj2PkKcs-UCvA_VjrrWlIXggTEv8ThoPnrF02yT0H4DvJnnab97xwWs20cbMWVulXOcYxhA8fA6pTdXKWkBXmXKLX9tWwuiEK94lZ2nXiiKRvTTmAgoGOSu8OJyrj8
+### 5. Configure Node Options (If Necessary)
 
-$env:NODE_OPTIONS = "--openssl-legacy-provider"
-set NODE_OPTIONS=--openssl-legacy-provider
+If you encounter OpenSSL-related issues, set the `NODE_OPTIONS` environment variable:
 
-album-art 'Metro Boomin' --album 'Heroes and Villains' --size 'large'
+- **For Unix/Linux/macOS**:
 
-var maximage = require('./userscript.user.js');
+  ```bash
+  export NODE_OPTIONS=--openssl-legacy-provider
+  ```
 
-"value": "public, max-age=31536000, immutable"
-"value": "public, max-age=31536000, immutable"
+- **For Windows Command Prompt**:
 
-export NODE_OPTIONS=--openssl-legacy-provider
+  ```cmd
+  set NODE_OPTIONS=--openssl-legacy-provider
+  ```
+
+- **For Windows PowerShell**:
+
+  ```powershell
+  $env:NODE_OPTIONS = "--openssl-legacy-provider"
+  ```
+
+### 6. Run the Application
+
+Start the development server:
+
+```bash
 npm run dev
+# or
+yarn dev
+```
 
-npm install
-npm run dev
+---
+
+## Dependencies
+
+- **Next.js**
+- **React**
+- **Tailwind CSS**
+- **React Icons**
+- **Next SEO**
+- **Spotify Web API**
+
+---
+
+**Disclaimer**: Ensure that you keep your Spotify API credentials and tokens secure. Do not expose them in your repository or commit history.
