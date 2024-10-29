@@ -118,21 +118,29 @@ export default async (_, res) => {
       "SAVAGE MODE II",
       "american dream",
       "One of Wun",
-      "Legends Never Die"
+      "Legends Never Die",
+      "WUNNA",
+      "Take Care (Deluxe)",
+      "Graduation",
+      "Drip Season 3 (Deluxe)"
     ];
 
     const albumCovers = [
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/HeroesVillains3.png?raw=true",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/metrospider.png?raw=true",
+      "/video/heroes-villains.mp4",
+      "/video/spider-verse.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/MetroxFuture.jpg?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/MetroxFuture2.png?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/drakeNevermind.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/GucciMane9.gif?raw=true",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/metrox21.gif?raw=true",
+      "/video/savagemode.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/21sav.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/gunnaWun.gif?raw=true",
-      "/video/juicewrld-legends.mp4"
+      "/video/juicewrld-legends.mp4",
+      "/video/wunna.mp4",
+      "/video/takecare.mp4",
+      "/video/graduation.mp4",
+      "/video/drip-season3.mp4"
     ];
 
     let index = favAlbums.indexOf(album);
