@@ -1,9 +1,10 @@
 import { NextSeo } from "next-seo";
 import { SiSpotify } from "react-icons/si";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const NowPlaying = () => {
   const [nowPlaying, setNowPlaying] = useState(null);
+  const videoRef = useRef(null);
 
   // Fetch now playing data from the API endpoint
   const fetchNowPlaying = async () => {
@@ -24,7 +25,7 @@ const NowPlaying = () => {
 
   // Function to check if the URL is a video
   const isVideo = (url) => {
-    return url.match(/\.(mp4|webm|ogg)$/i);
+    return url?.match(/\.(mp4|webm|ogg)$/i);
   };
 
   return (
@@ -38,10 +39,11 @@ const NowPlaying = () => {
                 {isVideo(nowPlaying.favAlbumCover) ? (
                   <video
                     autoPlay
-                    muted
                     loop
+                    muted
                     className="w-img"
                     src={nowPlaying.favAlbumCover}
+                    ref={videoRef}
                   >
                     <source src={nowPlaying.favAlbumCover} type="video/mp4" />
                   </video>
@@ -84,11 +86,17 @@ const NowPlaying = () => {
             }
             className="container relative flex items-center p-5 space-x-4 transition-shadow border rounded-md hover:shadow-md w-72"
           >
-            <div className="w-16">
+            <div className="w-16 cont">
               {nowPlaying?.isPlaying ? (
                 <>
                   {isVideo(nowPlaying.favAlbumCoverMain) ? (
-                    <video autoPlay muted loop className="w-16 shadow-sm">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-16 shadow-sm"
+                    >
                       <source
                         src={nowPlaying.favAlbumCoverMain}
                         type="video/mp4"
