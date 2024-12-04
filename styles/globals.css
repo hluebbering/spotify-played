@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
   /* inter var - latin */
   @font-face {
     font-family: "Inter";
@@ -23,10 +24,6 @@
     line-height: 1;
   }
 
-  /* Write your own custom base styles here */
-  h1 {
-    @apply text-3xl font-bold md:text-5xl font-primary;
-  }
 
   h1.text-center {
     font-family: "DM Sans";
@@ -38,13 +35,7 @@
     text-transform: uppercase;
   }
 
-  h2 {
-    @apply text-2xl font-bold md:text-4xl font-primary;
-  }
 
-  h3 {
-    @apply text-xl font-bold md:text-3xl font-primary;
-  }
 
   h3.text-center {
     color: black;
@@ -122,10 +113,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+  }
 
   body {
-    @apply text-sm font-primary md:text-base;
+    @apply text-sm font-primary;
   }
 
   .layout {
@@ -137,8 +128,7 @@
     @apply w-11/12 mx-auto;
   }
 
-  .shadow-sm {
-  }
+  .shadow-sm {}
 
   body {
     background-image: url("/img/aasd.jpg");
@@ -155,6 +145,7 @@
     object-fit: cover;
     z-index: -1;
   }
+
   img.w-img {
     width: 100%;
     height: 100%;
@@ -163,7 +154,9 @@
 
   a.container {
     position: relative;
-    width: 50% !important;
+    width: auto !important;
+    max-height: 50% !important;
+    max-width: 50% !important;
     margin: auto !important;
     padding: 30px !important;
     color: white;
@@ -174,24 +167,19 @@
     border-radius: 15px;
     border: 2px outset rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(20px);
-    background-image: linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.15),
-      transparent
-    );
+    background-image: linear-gradient(145deg,
+        rgba(255, 255, 255, 0.15),
+        transparent);
     background-color: rgba(0, 0, 0, 0.05);
-    background-image: linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.4) 0%,
-      rgba(255, 255, 255, 0.1) 100%
-    );
+    background-image: linear-gradient(145deg,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0.1) 100%);
   }
 
   .w-16 {
     width: 45% !important;
     border-radius: 20px;
-    filter: saturate(1.025) contrast(1.015)
-      drop-shadow(0.125px 0.25px 0.25px black);
+    filter: saturate(1.025) contrast(1.015) drop-shadow(0.125px 0.25px 0.25px black);
   }
 
   img.w-16.shadow-sm {
@@ -211,14 +199,12 @@
     height: calc(100% + 1px);
     background: url(https://pudding.cool/2021/10/judge-my-music/assets/images/plastic-small.jpg);
     background-size: contain;
-    mix-blend-mode: screen;
-    opacity: 1;
     z-index: 1;
-    mix-blend-mode: difference;
-    mix-blend-mode: exclusion;
+    mix-blend-mode: color-dodge;
+    mix-blend-mode: plus-lighter;
     opacity: 0.5;
     border-radius: 20px;
-    filter: brightness(1.125) opacity(1);
+    filter: brightness(1.125) opacity(1) contrast(1.025) saturate(2.5);
   }
 
   p.text-center {
@@ -236,18 +222,20 @@
     width: 65% !important;
     padding: 30px 20px !important;
     height: auto !important;
-}
-p.font-bold.component {
-  font-size: 18px;
-}
+  }
 
-.text-xs {
-  font-size: 12px !important;
-  letter-spacing: 3px !important;
-}
-p.font-bold.album {
-  font-size: 10px !important;
-}
+  p.font-bold.component {
+    font-size: 18px;
+  }
+
+  .text-xs {
+    font-size: 12px !important;
+    letter-spacing: 3px !important;
+  }
+
+  p.font-bold.album {
+    font-size: 10px !important;
+  }
 
 }
 
@@ -264,10 +252,9 @@ p.font-bold.album {
     background-repeat: no-repeat;
     transition: background-size 0.3s ease;
   }
+
   .animated-underline:hover,
   .animated-underline:focus {
     background-size: 0 2px, 100% 2px;
   }
 }
-
-
