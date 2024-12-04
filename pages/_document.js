@@ -10,7 +10,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <meta httpEquiv="refresh" content="90"></meta>
+        <meta httpEquiv="refreshhhhx" content="90"></meta>
         <Head />
         <body>
           <Main />

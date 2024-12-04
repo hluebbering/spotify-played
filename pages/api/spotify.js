@@ -123,7 +123,8 @@ export default async (_, res) => {
       "Graduation",
       "Drip Season 3 (Deluxe)",
       "CrasH Talk",
-      "Honestly, Nevermind"
+      "Honestly, Nevermind",
+      "Fighting Demons (Deluxe)"
     ];
 
     const albumCovers = [
@@ -140,9 +141,10 @@ export default async (_, res) => {
       "/video/wunna.mp4",
       "/video/takecare.mp4",
       "/video/graduation.mp4",
-      "/video/drip-season3.mp4",
+      "/video/drip-season.mp4",
       "/video/crash-talk.mp4",
-      "/video/honestly-nevermind.mp4"
+      "/video/honestly-nevermind.mp4",
+      "/video/fighting-dem.mp4"
     ];
 
     let index = favAlbums.indexOf(album);

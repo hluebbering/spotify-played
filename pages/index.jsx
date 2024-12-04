@@ -36,7 +36,13 @@ const NowPlaying = () => {
             {nowPlaying?.isPlaying ? (
               <>
                 {isVideo(nowPlaying.favAlbumCover) ? (
-                  <video autoPlay muted loop className="w-img">
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    className="w-img"
+                    src={nowPlaying.favAlbumCover}
+                  >
                     <source src={nowPlaying.favAlbumCover} type="video/mp4" />
                   </video>
                 ) : (
