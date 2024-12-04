@@ -86,13 +86,15 @@ export default async (_, res) => {
       "HEROES & VILLAINS",
       "a Gift & a Curse",
       "DC4",
-      "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)"
+      "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)",
+      "The Perfect LUV Tape"
     ];
     const albumCoversMain = [
       "https://github.com/hluebbering/web-design/blob/main/assets/images/metroboomin2.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/dc4.gif?raw=true",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/metrospider.gif?raw=true"
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/metrospider.gif?raw=true",
+      "/video/luv-tape.mp4"
     ];
 
     let indexMain = favAlbumsMain.indexOf(album);
@@ -124,7 +126,8 @@ export default async (_, res) => {
       "Drip Season 3 (Deluxe)",
       "CrasH Talk",
       "Honestly, Nevermind",
-      "Fighting Demons (Deluxe)"
+      "Fighting Demons (Deluxe)",
+      "The Perfect LUV Tape"
     ];
 
     const albumCovers = [
@@ -144,7 +147,8 @@ export default async (_, res) => {
       "/video/drip-season.mp4",
       "/video/crash-talk.mp4",
       "/video/honestly-nevermind.mp4",
-      "/video/fighting-dem.mp4"
+      "/video/fighting-dem.mp4",
+      "/video/luv-tape.mp4"
     ];
 
     let index = favAlbums.indexOf(album);
