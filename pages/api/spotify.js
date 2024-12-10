@@ -132,7 +132,7 @@ export default async (_, res) => {
 
     const albumCovers = [
       //"/video/heroes-villains.mp4",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/HeroesVillains2.png?raw=true",
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/HeroesVillains3.png?raw=true",
       "/video/spider-verse.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/MetroxFuture.jpg?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/MetroxFuture2.png?raw=true",
