@@ -61,8 +61,6 @@ export const topTracks = async () => {
   });
 };
 
-
-
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (_, res) => {
   const getData = async () => {
@@ -87,7 +85,7 @@ export default async (_, res) => {
       "a Gift & a Curse",
       "DC4",
       "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)",
-      "The Perfect LUV Tape"
+      "The Perfect LUV Tape",
     ];
     const albumCoversMain = [
       //"https://github.com/hluebbering/web-design/blob/main/assets/images/metroboomin2.gif?raw=true",
@@ -95,7 +93,7 @@ export default async (_, res) => {
       "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/dc4.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/metrospider.gif?raw=true",
-      "/video/luv-tape.mp4"
+      "https://github.com/hluebbering/web-design/blob/main/assets/images/erasesocial.gif?raw=true",
     ];
 
     let indexMain = favAlbumsMain.indexOf(album);
@@ -106,9 +104,6 @@ export default async (_, res) => {
     } else {
       favAlbumCoverMain = albumImageUrl;
     }
-
-
-
 
     const favAlbums = [
       "HEROES & VILLAINS",
@@ -128,7 +123,8 @@ export default async (_, res) => {
       "CrasH Talk",
       "Honestly, Nevermind",
       "Fighting Demons (Deluxe)",
-      "The Perfect LUV Tape"
+      "The Perfect LUV Tape",
+      "MIXTAPE PLUTO",
     ];
 
     const albumCovers = [
@@ -151,7 +147,8 @@ export default async (_, res) => {
       "/video/crash-talk.mp4",
       "/video/honestly-nevermind.mp4",
       "/video/fighting-dem.mp4",
-      "/video/luv-tape.mp4"
+      "/video/luv-tape2.mp4",
+      "/video/mixtape-pluto.mp4",
     ];
 
     let index = favAlbums.indexOf(album);
@@ -174,7 +171,7 @@ export default async (_, res) => {
       title,
       albumHigh,
       favAlbumCover,
-      favAlbumCoverMain
+      favAlbumCoverMain,
     });
   };
 
@@ -184,8 +181,3 @@ export default async (_, res) => {
   // Call the API every 5 seconds
   //setTimeout(getData, 500000000000);
 };
-
-
-
-
-
