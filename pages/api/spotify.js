@@ -85,14 +85,14 @@ export default async (_, res) => {
       "a Gift & a Curse",
       "DC4",
       "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)",
-      "The Perfect LUV Tape",
+      //"The Perfect LUV Tape",
     ];
     const albumCoversMain = [
       "/video/heroes-villains.mp4",
       "/video/gunna-gift-and-curse.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/dc4.gif?raw=true",
       "/video/spider-verse.mp4",
-      "/video/luv-tape2.mp4",
+      //"/video/luv-tape2.mp4",
     ];
 
     let indexMain = favAlbumsMain.indexOf(album);
@@ -122,7 +122,7 @@ export default async (_, res) => {
       "CrasH Talk",
       "Honestly, Nevermind",
       "Fighting Demons (Deluxe)",
-      //"The Perfect LUV Tape",
+      "The Perfect LUV Tape",
       "MIXTAPE PLUTO",
     ];
 
@@ -144,7 +144,7 @@ export default async (_, res) => {
       "/video/crash-talk.mp4",
       "/video/honestly-nevermind.mp4",
       "/video/fighting-dem.mp4",
-      //"/video/luv-tape2.mp4",
+      "/video/luv-tape2.mp4",
       "/video/mixtape-pluto.mp4",
     ];
 
