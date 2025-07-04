@@ -83,14 +83,12 @@ export default async (_, res) => {
     const favAlbumsMain = [
       "HEROES & VILLAINS",
       "a Gift & a Curse",
-      "DC4",
       "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)",
       //"The Perfect LUV Tape",
     ];
     const albumCoversMain = [
       "/video/heroes-villains.mp4",
       "/video/gunna-gift-and-curse.mp4",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/dc4.gif?raw=true",
       "/video/spider-verse.mp4",
       //"/video/luv-tape2.mp4",
     ];
@@ -110,7 +108,6 @@ export default async (_, res) => {
       "WE DON'T TRUST YOU",
       "WE STILL DON'T TRUST YOU",
       "a Gift & a Curse",
-      "Everybody Looking",
       "SAVAGE MODE II",
       "american dream",
       "One of Wun",
@@ -132,10 +129,9 @@ export default async (_, res) => {
       "/video/we-dont-trust-you.mp4",
       "/img/metro-future-WSDTY.png",
       "/video/gunna-gift-and-curse.mp4",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/GucciMane9.gif?raw=true",
       "/video/savagemode.mp4",
       "/video/21-savage-american-dream.mp4",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/gunnaWun.gif?raw=true",
+      "/video/gunna-one-of-wun.mp4",
       "/video/juicewrld-legends.mp4",
       "/video/wunna.mp4",
       "/video/takecare.mp4",
