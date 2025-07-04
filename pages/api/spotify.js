@@ -88,7 +88,6 @@ export default async (_, res) => {
       "The Perfect LUV Tape",
     ];
     const albumCoversMain = [
-      //"https://github.com/hluebbering/web-design/blob/main/assets/images/metroboomin2.gif?raw=true",
       "/video/heroes-villains.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/dc4.gif?raw=true",
