@@ -122,7 +122,7 @@ export default async (_, res) => {
       "CrasH Talk",
       "Honestly, Nevermind",
       "Fighting Demons (Deluxe)",
-      "The Perfect LUV Tape",
+      //"The Perfect LUV Tape",
       "MIXTAPE PLUTO",
     ];
 
@@ -144,7 +144,7 @@ export default async (_, res) => {
       "/video/crash-talk.mp4",
       "/video/honestly-nevermind.mp4",
       "/video/fighting-dem.mp4",
-      "/video/luv-tape2.mp4",
+      //"/video/luv-tape2.mp4",
       "/video/mixtape-pluto.mp4",
     ];
 
