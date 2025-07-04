@@ -134,7 +134,7 @@ export default async (_, res) => {
       "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/GucciMane9.gif?raw=true",
       "/video/savagemode.mp4",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/21sav.gif?raw=true",
+      "/video/21-savage-american-dream.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/gunnaWun.gif?raw=true",
       "/video/juicewrld-legends.mp4",
       "/video/wunna.mp4",
