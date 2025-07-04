@@ -92,7 +92,7 @@ export default async (_, res) => {
       "/video/gunna-gift-and-curse.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/dc4.gif?raw=true",
       "/video/spider-verse.mp4",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/erasesocial.gif?raw=true",
+      "/video/luv-tape2.mp4",
     ];
 
     let indexMain = favAlbumsMain.indexOf(album);
