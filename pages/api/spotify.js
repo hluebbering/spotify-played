@@ -89,9 +89,9 @@ export default async (_, res) => {
     ];
     const albumCoversMain = [
       "/video/heroes-villains.mp4",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true",
+      "/video/gunna-gift-and-curse.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/dc4.gif?raw=true",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/metrospider.gif?raw=true",
+      "/video/spider-verse.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/erasesocial.gif?raw=true",
     ];
 
@@ -131,7 +131,7 @@ export default async (_, res) => {
       "/video/spider-verse.mp4",
       "/video/we-dont-trust-you.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/MetroxFuture2.png?raw=true",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/gunna.gif?raw=true",
+      "/video/gunna-gift-and-curse.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/GucciMane9.gif?raw=true",
       "/video/savagemode.mp4",
       "/video/21-savage-american-dream.mp4",
