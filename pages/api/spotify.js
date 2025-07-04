@@ -91,7 +91,7 @@ export default async (_, res) => {
       "/video/heroes-villains.mp4",
       "/video/gunna-gift-and-curse.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/dc4.gif?raw=true",
-      "https://media.pitchfork.com/photos/6479dbcfc789a3a5fc5f44ed/3:2/w_3000,h_2000,c_limit/Metro-Boomin-Spider-Man.jpg",
+      "/video/spider-verse.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/erasesocial.gif?raw=true",
     ];
 
@@ -128,7 +128,7 @@ export default async (_, res) => {
 
     const albumCovers = [
       "/img/HeroesVillains3.png",
-      "/video/spider-verse.mp4",
+      "https://media.pitchfork.com/photos/6479dbcfc789a3a5fc5f44ed/3:2/w_3000,h_2000,c_limit/Metro-Boomin-Spider-Man.jpg",
       "/video/we-dont-trust-you.mp4",
       "/img/metro-future-WSDTY.png",
       "/video/gunna-gift-and-curse.mp4",
