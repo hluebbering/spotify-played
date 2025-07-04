@@ -130,7 +130,7 @@ export default async (_, res) => {
       "/img/HeroesVillains3.png",
       "/video/spider-verse.mp4",
       "/video/we-dont-trust-you.mp4",
-      "https://github.com/hluebbering/web-design/blob/main/assets/images/MetroxFuture2.png?raw=true",
+      "/img/metro-future-WSDTY.png",
       "/video/gunna-gift-and-curse.mp4",
       "https://github.com/hluebbering/web-design/blob/main/assets/images/GucciMane9.gif?raw=true",
       "/video/savagemode.mp4",
